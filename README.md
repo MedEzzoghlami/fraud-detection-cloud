@@ -1,9 +1,9 @@
-🚀 Fraud Detection System
+ Fraud Detection System
 
 A cloud-native fraud detection platform for identifying suspicious financial transactions using Machine Learning.
 The system includes a FastAPI backend, a Streamlit dashboard, a PostgreSQL database, and is fully containerized with Docker and deployed on Render.
 
-📑 Table of Contents
+ Table of Contents
 
 Overview
 
@@ -29,17 +29,17 @@ Future Improvements
 
 License
 
-🔍 Overview
+ Overview
 
 This project implements an anomaly-based fraud detection system using XGBoost and Isolation Forest. It supports:
 
-✅ Real-time detection of fraudulent transactions.
-✅ REST API (FastAPI) to serve predictions.
-✅ PostgreSQL database for storing results and logs.
-✅ Streamlit dashboard for monitoring anomalies and alerts.
-✅ Cloud deployment on Render with Docker.
+* Real-time detection of fraudulent transactions.
+* REST API (FastAPI) to serve predictions.
+* PostgreSQL database for storing results and logs.
+* Streamlit dashboard for monitoring anomalies and alerts.
+* Cloud deployment on Render with Docker.
 
-🏗 Architecture
+ Architecture
 flowchart TD
     subgraph Client
     A[User Transaction Request]
@@ -60,7 +60,7 @@ flowchart TD
 
 ---
 
-## 📂 Project Structure  
+ Project Structure  
 
 
 fraud-detection-cloud/
@@ -98,14 +98,14 @@ fraud-detection-cloud/
 
 ---
 
-## ⚙️ Setup & Installation  
+ Setup & Installation  
 
-### 1️⃣ Clone Repository  
+###  Clone Repository  
 ```bash
 git clone https://github.com/MedEzzoghlami/fraud-detection-cloud.git
 cd fraud-detection-cloud
 
-2️⃣ Create Virtual Environment
+ Create Virtual Environment
 python -m venv venv
 
 
@@ -115,11 +115,11 @@ Windows: venv\Scripts\activate
 
 Linux/Mac: source venv/bin/activate
 
-3️⃣ Install Dependencies
+ Install Dependencies
 pip install -r requirements.txt
 
-▶️ Usage
-🔹 Run API (FastAPI)
+ Usage
+ Run API (FastAPI)
 cd app
 uvicorn main:app --reload
 
@@ -133,7 +133,7 @@ GET /health → check service status
 API is live on Render:
 👉 https://fraud-api-in8d.onrender.com
 
-🔹 Run Dashboard (Streamlit)
+ Run Dashboard (Streamlit)
 cd dashboard
 streamlit run streamlit_app.py
 
@@ -160,9 +160,9 @@ Evaluate & save:
 python model/evaluate_model.py
 
 
-✅ A pre-trained XGBoost model (xgb_fraud_model.pkl) is included.
+ A pre-trained XGBoost model (xgb_fraud_model.pkl) is included.
 
-📊 Logging
+ Logging
 
 Logs are stored in project root:
 
@@ -199,3 +199,4 @@ Integrate Prometheus + Grafana for monitoring.
 ** License
 
 MIT License
+
