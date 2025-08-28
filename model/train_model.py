@@ -33,10 +33,9 @@ model = XGBClassifier(
 
 model.fit(X_res, y_res)
 
-# === 4. Predict probabilities ===
 y_probs = model.predict_proba(X_test)[:, 1]
 
-# === 5. Find best threshold (trade-off) ===
+
 precisions, recalls, thresholds = precision_recall_curve(y_test, y_probs)
 
 best_threshold = 0.5
@@ -51,16 +50,17 @@ for p, r, t in zip(precisions, recalls, thresholds):
 
 print(f"\n🔎 Selected threshold: {best_threshold:.3f} with Recall={best_recall:.4f}, Precision={best_precision:.4f}")
 
-# === 6. Apply threshold ===
+
 y_pred = (y_probs >= best_threshold).astype(int)
 
-# === 7. Evaluation ===
+
 print("\nClassification Report (with optimized threshold):\n")
 print(classification_report(y_test, y_pred, digits=4))
 
 print("Confusion Matrix:\n")
 print(confusion_matrix(y_test, y_pred))
 
-# === 8. Save model and threshold ===
+
 joblib.dump((model, best_threshold), "C:\\Users\\Toshiba\\fraud-detection-cloud\\model\\xgb_fraud_model.pkl")
 print("\n✅ XGBoost fraud detection model saved as 'C:\\Users\\Toshiba\\fraud-detection-cloud\\model\\xgb_fraud_model.pkl'")
+
