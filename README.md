@@ -1,11 +1,11 @@
- Fraud Detection System
+***Fraud Detection System
 
 A cloud-native fraud detection platform for identifying suspicious financial transactions using Machine Learning.
 The system includes a FastAPI backend, a Streamlit dashboard, a PostgreSQL database, and is fully containerized with Docker and deployed on Render.
 
  Table of Contents
 
-Overview
+** Overview **
 
 Architecture
 
@@ -29,7 +29,7 @@ Future Improvements
 
 License
 
- Overview
+** Overview **
 
 This project implements an anomaly-based fraud detection system using XGBoost and Isolation Forest. It supports:
 
@@ -39,7 +39,7 @@ This project implements an anomaly-based fraud detection system using XGBoost an
 * Streamlit dashboard for monitoring anomalies and alerts.
 * Cloud deployment on Render with Docker.
 
- Architecture
+** Architecture **
 flowchart TD
     subgraph Client
     A[User Transaction Request]
@@ -60,7 +60,7 @@ flowchart TD
 
 ---
 
- Project Structure  
+** Project Structure **  
 
 
 fraud-detection-cloud/
@@ -98,7 +98,7 @@ fraud-detection-cloud/
 
 ---
 
- Setup & Installation  
+** Setup & Installation **  
 
 ###  Clone Repository  
 ```bash
@@ -199,4 +199,5 @@ Integrate Prometheus + Grafana for monitoring.
 ** License
 
 MIT License
+
 
